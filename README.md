@@ -28,8 +28,20 @@ message if success
 Data migration successful!
 ```
 
+### 4️⃣ Run API Service
+```sh
+npm run dev
+```
+message if success
+```
+Server is running on http://localhost:3000
+Connected to MongoDB Atlas
+```
 
 ## 📡 API Routes (Coming Soon)
-| Method | Endpoint | Description |
-|--------|---------|-------------|
-| GET | `/flowers` | retrieve all flower data |
+| Method | Endpoint | Description | Status |
+|--------|---------|-------------|--------|
+| GET | `/flowers` | retrieve all flower data | Done 🙆 |
+| GET | `/flowers/{latin-name}` | retrieve flower data by latin name | Next 🙋‍♂️ |
+| POST | `/flowers` | create a flower data | Next 🙋‍♂️ |
+| POST | `/flowers/import` | create flower datas by importing csv file | Next 🙋‍♂️ |

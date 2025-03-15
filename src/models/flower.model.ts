@@ -39,7 +39,7 @@ const flowerValidationSchema = yup.object({
 
 const flowerSchema = new Schema<Flower>({
   name: { type: String, required: true },
-  latin_name: { type: String, required: true },
+  latin_name: { type: String, required: true, unique: true },
   lifespan_minimum_year: { type: Number, required: true },
   lifespan_maximum_year: { type: Number, required: true },
   petal_count: { type: Number, required: true },

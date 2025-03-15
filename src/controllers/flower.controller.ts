@@ -5,7 +5,7 @@ class FlowerController {
   async list(req: Request, res: Response) {
     try {
       const { keyword, page = 1, limit = 10 } = req.query;
-      console.log("Query Params:", req.query);
+      
       const pageNumber = parseInt(page as string, 10);
       const limitNumber = parseInt(limit as string, 10);
       const skip = (pageNumber - 1) * limitNumber;
@@ -18,7 +18,6 @@ class FlowerController {
       const flowers = await Flower.find(filter)
         .skip(skip)
         .limit(limitNumber);
-      console.log("Flower: ",flowers);
       const total = await Flower.countDocuments(filter);
 
       res.json({
